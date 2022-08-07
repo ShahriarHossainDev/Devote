@@ -8,8 +8,28 @@
 import CoreData
 
 struct PersistenceController {
+    // MARK: - Persistence Controller
     static let shared = PersistenceController()
     
+    
+    // MARK: - Persistence Container
+    let container: NSPersistentContainer
+    
+    // MARK: - Initialization (load the persistent store)
+    init(inMemory: Bool = false) {
+        container = NSPersistentContainer(name: "Devote")
+        if inMemory {
+            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        }
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+    }
+    
+    // MARK: - Preview
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
@@ -26,18 +46,4 @@ struct PersistenceController {
         return result
     }()
     
-    let container: NSPersistentContainer
-    
-    init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "Devote")
-        if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
-        }
-        container.viewContext.automaticallyMergesChangesFromParent = true
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-    }
 }
