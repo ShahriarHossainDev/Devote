@@ -12,10 +12,7 @@ struct ContentView: View {
     // MARK: - Property
     
     @State var task: String = ""
-    
-    private var isButtonDisabled: Bool {
-        task.isEmpty
-    }
+    @State private var showNewTaskItem: Bool = false
     
     // Fetching Data
     @Environment(\.managedObjectContext) private var viewContext
@@ -26,24 +23,6 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
     
     // MARK: - Function
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-            newItem.task = task
-            newItem.completion = false
-            newItem.id = UUID()
-            
-            do {
-                try viewContext.save()
-            } catch {
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-            task = ""
-            hideKeyboard()
-        }
-    }
     
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
@@ -62,29 +41,30 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                // MARK: - Main View
                 VStack {
-                    VStack(spacing: 16) {
-                        TextField("New Task", text: $task)
-                            .padding()
-                            .background(Color(UIColor.systemGray6))
-                            .cornerRadius(10)
-                        
-                        Button {
-                            addItem()
-                        } label: {
-                            Spacer()
-                            Text("SAVE")
-                            Spacer()
-                        }
-                        .padding()
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .background(isButtonDisabled ? Color.gray : Color.pink)
-                        .cornerRadius(10)
-                        .disabled(isButtonDisabled)
-                        
-                    }// VStack
-                    .padding()
+                    // MARK: - Header
+                    Spacer(minLength: 80)
+                    
+                    // MARK: - New Task Button
+                    Button {
+                        showNewTaskItem = true
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 30, weight: .semibold, design: .rounded))
+                        Text("New Task")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
+                    }
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 15)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .leading, endPoint: .trailing)
+                                    .clipShape(Capsule())
+                    )
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0.0, y: 4.0)
+
+                    
+                    // MARK: - Tasks
                     List {
                         ForEach(items) { item in
                             VStack(alignment: .leading) {
@@ -105,6 +85,10 @@ struct ContentView: View {
                     .padding(.vertical, 0)
                     .frame(maxWidth: 640)
                 } // VStack
+                // MARK: - New Task Item
+                if showNewTaskItem {
+                    NewTaskItemVIew()
+                }
                 
             }// ZStack
             .onAppear(perform: {

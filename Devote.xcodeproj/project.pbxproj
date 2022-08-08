@@ -19,6 +19,7 @@
 		FA5CCFDD289B9F970087EC06 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CCFDC289B9F970087EC06 /* Constant.swift */; };
 		FA85CFFD289FBEB300831B67 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85CFFC289FBEB300831B67 /* HideKeyboardExtension.swift */; };
 		FA85CFFF289FC2B500831B67 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85CFFE289FC2B500831B67 /* BackgroundImageView.swift */; };
+		FA85D00128A0EE2B00831B67 /* NewTaskItemVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85D00028A0EE2B00831B67 /* NewTaskItemVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FA5CCFDC289B9F970087EC06 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FA85CFFC289FBEB300831B67 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		FA85CFFE289FC2B500831B67 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
+		FA85D00028A0EE2B00831B67 /* NewTaskItemVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				FA5CCFB9289A67F30087EC06 /* ContentView.swift */,
 				FA85CFFE289FC2B500831B67 /* BackgroundImageView.swift */,
+				FA85D00028A0EE2B00831B67 /* NewTaskItemVIew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				FA5CCFDD289B9F970087EC06 /* Constant.swift in Sources */,
 				FA5CCFC4289A67F60087EC06 /* Devote.xcdatamodeld in Sources */,
 				FA5CCFB8289A67F30087EC06 /* DevoteApp.swift in Sources */,
+				FA85D00128A0EE2B00831B67 /* NewTaskItemVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
