@@ -12,6 +12,7 @@ struct NewTaskItemVIew: View {
     @State var task: String = ""
     
     @Environment(\.managedObjectContext) private var viewContext
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = false
     @Binding var isShowing: Bool
     
     private var isButtonDisabled: Bool {
@@ -46,7 +47,7 @@ struct NewTaskItemVIew: View {
             VStack(spacing: 16) {
                 TextField("New Task", text: $task)
                     .padding()
-                    .background(Color(UIColor.systemGray6))
+                    .background(isDarkMode ? Color(UIColor.tertiarySystemBackground) : Color(UIColor.secondarySystemBackground))
                     .cornerRadius(10)
                     .foregroundColor(.pink)
                     .font(.system(size: 24, weight: .bold, design: .rounded))
@@ -68,7 +69,7 @@ struct NewTaskItemVIew: View {
             }// VStack
             .padding(.horizontal)
             .padding(.vertical, 20)
-            .background(Color.white)
+            .background(isDarkMode ? Color(UIColor.secondarySystemBackground) : Color.white)
             .cornerRadius(16)
             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.65), radius: 24)
             .frame(maxWidth: 640)
