@@ -87,7 +87,13 @@ struct ContentView: View {
                 } // VStack
                 // MARK: - New Task Item
                 if showNewTaskItem {
-                    NewTaskItemVIew()
+                    BlankVIew()
+                        .onTapGesture {
+                            withAnimation(){
+                                showNewTaskItem = false
+                            }
+                        }
+                    NewTaskItemVIew(isShowing: $showNewTaskItem)
                 }
                 
             }// ZStack

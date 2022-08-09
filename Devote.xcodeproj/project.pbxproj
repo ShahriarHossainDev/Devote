@@ -20,6 +20,7 @@
 		FA85CFFD289FBEB300831B67 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85CFFC289FBEB300831B67 /* HideKeyboardExtension.swift */; };
 		FA85CFFF289FC2B500831B67 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85CFFE289FC2B500831B67 /* BackgroundImageView.swift */; };
 		FA85D00128A0EE2B00831B67 /* NewTaskItemVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85D00028A0EE2B00831B67 /* NewTaskItemVIew.swift */; };
+		FA85D00328A2BF2900831B67 /* BlankVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85D00228A2BF2900831B67 /* BlankVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FA85CFFC289FBEB300831B67 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		FA85CFFE289FC2B500831B67 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		FA85D00028A0EE2B00831B67 /* NewTaskItemVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemVIew.swift; sourceTree = "<group>"; };
+		FA85D00228A2BF2900831B67 /* BlankVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				FA5CCFB9289A67F30087EC06 /* ContentView.swift */,
 				FA85CFFE289FC2B500831B67 /* BackgroundImageView.swift */,
 				FA85D00028A0EE2B00831B67 /* NewTaskItemVIew.swift */,
+				FA85D00228A2BF2900831B67 /* BlankVIew.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				FA85CFFD289FBEB300831B67 /* HideKeyboardExtension.swift in Sources */,
 				FA5CCFDD289B9F970087EC06 /* Constant.swift in Sources */,
 				FA5CCFC4289A67F60087EC06 /* Devote.xcdatamodeld in Sources */,
+				FA85D00328A2BF2900831B67 /* BlankVIew.swift in Sources */,
 				FA5CCFB8289A67F30087EC06 /* DevoteApp.swift in Sources */,
 				FA85D00128A0EE2B00831B67 /* NewTaskItemVIew.swift in Sources */,
 			);
