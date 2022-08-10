@@ -20,14 +20,6 @@ This application's GitHub repository should contain a README.md file explaining 
 * How to show alerts with SwiftUI
 * How to create stickers without writing any code 
 
-![Image](https://github.com/ShahriarHossainDev/Touchdown/blob/main/Touchdown/Image/1.png)
-
-![Image](https://github.com/ShahriarHossainDev/Touchdown/blob/main/Touchdown/Image/2.png)
-
-![Image](https://github.com/ShahriarHossainDev/Touchdown/blob/main/Touchdown/Image/3.png)
-
-![Image](https://github.com/ShahriarHossainDev/Touchdown/blob/main/Touchdown/Image/4.png)
-
 ## APP DESIGN
 
 ### USER INTERFACE AND USER EXPERIENCE High-Quality Resources
@@ -38,6 +30,13 @@ This application's GitHub repository should contain a README.md file explaining 
 * Animations with SwiftUI
 * iMessage Stiker Pack
 * App Icons & Launch Screen
+
+## Images
+![Image](https://github.com/ShahriarHossainDev/Devote/blob/main/Devote/Images/1.png)
+![Image](https://github.com/ShahriarHossainDev/Devote/blob/main/Devote/Images/2.png)
+![Image](https://github.com/ShahriarHossainDev/Devote/blob/main/Devote/Images/3.png)
+![Image](https://github.com/ShahriarHossainDev/Devote/blob/main/Devote/Images/4.png)
+![Image](https://github.com/ShahriarHossainDev/Devote/blob/main/Devote/Images/5.png)
 
 ## Commit Early and Often
 
